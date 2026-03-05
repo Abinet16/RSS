@@ -9,8 +9,8 @@ export default function HomePage() {
   const router = useRouter();
 
   useEffect(() => {
-    if (!isLoading && !user) {
-      router.push('/login');
+    if (!isLoading && user) {
+      router.push('/feed');
     }
   }, [user, isLoading, router]);
 
