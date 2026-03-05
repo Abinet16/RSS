@@ -1,9 +1,9 @@
-import { Post } from '@/types'';
+import { Post } from '@/types';
 
 interface PostCardProps {
   post: Post;
-  onMarkAsRead: (postId: string) =>> void;
-  onMarkAsFavorite: (postId: string) =>> void;
+  onMarkAsRead: (postId: string) => void;
+  onMarkAsFavorite: (postId: string) => void;
 }
 
 export default function PostCard({ post, onMarkAsRead, onMarkAsFavorite }: PostCardProps) {
@@ -12,7 +12,7 @@ export default function PostCard({ post, onMarkAsRead, onMarkAsFavorite }: PostC
 
   return (
     <div className='bg-white rounded-lg shadow-md p-6 mb-4 hover:shadow-lg transition-shadow'>
-      <h3 className='text-lg font-semibold mb-2 text-gray-800>
+      <h3 className='text-lg font-semibold mb-2 text-gray-800'>
         <a
           href={post.link}
           target='_blank'
@@ -62,7 +62,7 @@ export default function PostCard({ post, onMarkAsRead, onMarkAsFavorite }: PostC
           rel='noopener noreferrer'
           className='text-indigo-600 hover:underline'
         >
-          Read more <span role='img' aria-label='arrow'>></span>
+          Read more <span role='img' aria-label='arrow'>&rarr;</span>
         </a>
       </div>
     </div>
