@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useState } from 'react';
 import { useFeed } from '@/contexts/FeedContext';
 import PostCard from '@/components/PostCard';
@@ -77,10 +78,9 @@ export default function FeedPage() {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className='w-full pl-10 pr-3 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent sm:text-sm'
-              >
-              <svg className='absolute ml-3 mt-2 h-4 w-4 text-gray-400' fill='none' viewBox='422 -56 20 20'>
-                <path d='M436 -40h-4a6 6 0 0 0 -6 6v4a6 6 0 0 0 6 6h4a6 6 0 0 0 6 -6v-4a6 6 0 0 0 -6 -6z' />
-                <path d='M431 -43h-8v8M431 -43h-8M423 -43h-8M423 -51h8M423 -51h8M431 -51h8M439 -51h-8M439 -51h-8M431 -43v-8M431 -51v-8M423 -43v-8M423 -51v-8M439 -43v-8M439 -51v-8' />
+              />
+              <svg className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' />
               </svg>
             </div>
             <select
@@ -101,12 +101,12 @@ export default function FeedPage() {
               </p>
               {filter === 'unread' && (
                 <p className='text-gray-400 text-sm mb-4'>
-                  You've read all your posts!
+                  You&apos;`ve read all your posts!
                 </p>
               )}
               {filter === 'favorites' && (
                 <p className='text-gray-400 text-sm mb-4'>
-                  You haven't favorited any posts yet.
+                  You haven&apos;t favorited any posts yet.
                 </p>
               )}
               {filter === 'all' && (
